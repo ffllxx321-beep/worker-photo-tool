@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>工人入职照片处理指引</title>
+  <style>
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      padding: 20px;
+      background: #f0f8ff;
+      margin: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #1a5fb4;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+    .step {
+      margin: 25px 0;
+      padding: 18px;
+      background: #eef7ff;
+      border-radius: 12px;
+      border-left: 4px solid #3498db;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 30px;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    .btn-compress {
+      background: #e74c3c;
+    }
+    .btn-compress:hover {
+      background: #c0392b;
+    }
+    .qrcode {
+      width: 220px;
+      height: 220px;
+      margin: 15px auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .note {
+      color: #e74c3c;
+      font-size: 14px;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>👷‍♂️ 工人入职照片处理指引</h1>
+    
+    <div class="step">
+      <h3>第 1 步：生成合规照片</h3>
+      <p>点击下方按钮，上传自拍照并自动压缩为考勤机可用格式（&lt;1MB）</p>
+      <a href="compress.html" class="btn btn-compress">📸 生成合规照片</a>
+    </div>
+
+    <div class="step">
+      <h3>第 2 步：填写入职信息</h3>
+      <p>请扫描下方二维码进入登记表单</p>
+      <!-- 替换为你自己的二维码图片 -->
+      <img src="qrcode.png" alt="入职登记二维码" class="qrcode" onerror="this.style.display='none'; this.parentNode.innerHTML+='<p style=\"color:#e74c3c;\">⚠️ 二维码未加载，请联系管理员</p>';">
+      <p style="color: #666; font-size: 14px; margin-top: 10px;">
+        如无法扫码，请长按保存图片后使用微信扫一扫
+      </p>
+    </div>
+
+    <p class="note">
+      ⚠️ 重要提示：<br>
+      必须先完成第1步生成合规照片，<br>
+      再在表单中上传该照片，否则考勤机无法识别！
+    </p>
+  </div>
+</body>
+</html>
